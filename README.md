@@ -36,3 +36,9 @@ A completely useless program that draws a graph with the headers of a markdown f
 Becomes
 
 ![Example](graph.png)
+
+## Installation
+
+`chmod +x markdown-to-graph.py`
+
+`sudo cp markdown-to-graph.py /usr/local/bin/md2graph`

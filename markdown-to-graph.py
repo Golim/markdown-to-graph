@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import subprocess
 import sys
 
@@ -6,7 +8,7 @@ if len(sys.argv) < 2:
     exit()
 
 markdown = open(sys.argv[1], "r")
-dot = open("graph.dot", "w")
+dot = open("/tmp/graph.dot", "w")
 
 # Lines of the markdown file
 lines = markdown.readlines()
@@ -84,4 +86,4 @@ graph_to_dot()
 dot.close()
 
 # Print the dot file to a png file
-subprocess.run(["dot", "-Tpng", "graph.dot", "-o", sys.argv[2]])
+subprocess.run(["dot", "-Tpng", "/tmp/graph.dot", "-o", sys.argv[2]])
